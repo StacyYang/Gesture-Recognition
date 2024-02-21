@@ -1,0 +1,332 @@
+Downloading: "https://download.pytorch.org/models/r3d_18-b3b3357e.pth" to /home/hang.zhang/.cache/torch/hub/checkpoints/r3d_18-b3b3357e.pth
+Not using distributed mode
+Namespace(model='r3d_18', weights='R3D_18_Weights.KINETICS400_V1', data_path='/home/hang.zhang/gesture_rec/dataset', device='cuda', batch_size=24, epochs=45, workers=4, lr=0.01, momentum=0.9, weight_decay=0.0001, lr_milestones=[20, 30, 40], lr_gamma=0.1, lr_warmup_epochs=10, lr_warmup_method='linear', lr_warmup_decay=0.001, print_freq=10, output_dir='output_r3d_18', resume='', start_epoch=0, cache_dataset=False, sync_bn=False, test_only=False, use_deterministic_algorithms=False, world_size=1, dist_url='env://', val_resize_size=(128, 171), val_crop_size=(112, 112), train_resize_size=(128, 171), train_crop_size=(112, 112), amp=False, distributed=False)
+Loading data
+Loading training data
+Took 0.027798891067504883
+Loading validation data
+Per-class sample count for evaluation: [9, 14, 11, 14, 15, 8, 11, 9, 9]
+Creating data loaders
+Creating model
+  0%|          | 0.00/127M [00:00<?, ?B/s]  6%|▌         | 7.54M/127M [00:00<00:01, 79.0MB/s] 18%|█▊        | 23.2M/127M [00:00<00:00, 129MB/s]  32%|███▏      | 40.6M/127M [00:00<00:00, 154MB/s] 45%|████▌     | 57.9M/127M [00:00<00:00, 165MB/s] 59%|█████▉    | 75.0M/127M [00:00<00:00, 170MB/s] 72%|███████▏  | 91.4M/127M [00:00<00:00, 171MB/s] 85%|████████▍ | 108M/127M [00:00<00:00, 160MB/s]  99%|█████████▊| 126M/127M [00:00<00:00, 168MB/s]100%|██████████| 127M/127M [00:00<00:00, 161MB/s]
+Start training
+Epoch: [0]  [ 0/18]  eta: 0:14:52  lr: 1e-05  clips/s: 0.533  loss: 2.2589 (2.2589)  acc1: 8.3333 (8.3333)  acc5: 62.5000 (62.5000)  time: 49.5616  data: 4.5427  max mem: 13663
+Epoch: [0]  [10/18]  eta: 0:00:47  lr: 0.0005650000000000003  clips/s: 15.262  loss: 2.2689 (2.2713)  acc1: 8.3333 (12.8788)  acc5: 54.1667 (54.9242)  time: 5.9309  data: 0.4132  max mem: 13663
+Epoch: [0] Total time: 0:01:16
+/home/hang.zhang/gesture_rec/utils.py:261: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return torch.tensor(val)
+Test:  [0/5]  eta: 0:00:22  loss: 2.2760 (2.2760)  acc1: 8.3333 (8.3333)  acc5: 58.3333 (58.3333)  time: 4.4311  data: 3.8739  max mem: 13663
+Test: Total time: 0:00:07
+ * Clip Acc@1 9.000 Clip Acc@5 62.000
+ * Video Acc@1 9.000 Video Acc@5 62.000
+Epoch: [1]  [ 0/18]  eta: 0:01:42  lr: 0.0010090000000000003  clips/s: 14.701  loss: 2.1166 (2.1166)  acc1: 4.1667 (4.1667)  acc5: 75.0000 (75.0000)  time: 5.7188  data: 4.0860  max mem: 13663
+Epoch: [1]  [10/18]  eta: 0:00:15  lr: 0.0015640000000000014  clips/s: 14.990  loss: 2.0963 (2.1141)  acc1: 16.6667 (17.4242)  acc5: 75.0000 (72.3485)  time: 1.9699  data: 0.3717  max mem: 13663
+Epoch: [1] Total time: 0:00:32
+Test:  [0/5]  eta: 0:00:21  loss: 1.9826 (1.9826)  acc1: 33.3333 (33.3333)  acc5: 79.1667 (79.1667)  time: 4.2351  data: 3.6805  max mem: 13663
+Test: Total time: 0:00:05
+ * Clip Acc@1 53.000 Clip Acc@5 91.000
+ * Video Acc@1 53.000 Video Acc@5 91.000
+Epoch: [2]  [ 0/18]  eta: 0:01:51  lr: 0.002008000000000002  clips/s: 14.521  loss: 1.8841 (1.8841)  acc1: 41.6667 (41.6667)  acc5: 91.6667 (91.6667)  time: 6.2185  data: 4.5656  max mem: 13663
+Epoch: [2]  [10/18]  eta: 0:00:16  lr: 0.0025630000000000023  clips/s: 14.640  loss: 1.7728 (1.7412)  acc1: 50.0000 (51.5151)  acc5: 87.5000 (88.6364)  time: 2.0378  data: 0.4154  max mem: 13663
+Epoch: [2] Total time: 0:00:33
+Test:  [0/5]  eta: 0:00:21  loss: 1.2665 (1.2665)  acc1: 58.3333 (58.3333)  acc5: 100.0000 (100.0000)  time: 4.2852  data: 3.7234  max mem: 13663
+Test: Total time: 0:00:05
+ * Clip Acc@1 70.000 Clip Acc@5 100.000
+ * Video Acc@1 70.000 Video Acc@5 100.000
+Epoch: [3]  [ 0/18]  eta: 0:01:35  lr: 0.003007000000000002  clips/s: 14.387  loss: 1.3773 (1.3773)  acc1: 54.1667 (54.1667)  acc5: 95.8333 (95.8333)  time: 5.3272  data: 3.6589  max mem: 13663
+Epoch: [3]  [10/18]  eta: 0:00:15  lr: 0.0035620000000000022  clips/s: 14.600  loss: 1.1009 (1.1208)  acc1: 66.6667 (67.0455)  acc5: 95.8333 (96.5909)  time: 1.9712  data: 0.3329  max mem: 13663
+Epoch: [3] Total time: 0:00:33
+Test:  [0/5]  eta: 0:00:27  loss: 0.8014 (0.8014)  acc1: 70.8333 (70.8333)  acc5: 95.8333 (95.8333)  time: 5.5318  data: 4.9587  max mem: 13663
+Test: Total time: 0:00:07
+ * Clip Acc@1 81.000 Clip Acc@5 99.000
+ * Video Acc@1 81.000 Video Acc@5 99.000
+Epoch: [4]  [ 0/18]  eta: 0:01:46  lr: 0.004006000000000004  clips/s: 14.134  loss: 0.6812 (0.6812)  acc1: 91.6667 (91.6667)  acc5: 100.0000 (100.0000)  time: 5.9066  data: 4.2084  max mem: 13663
+Epoch: [4]  [10/18]  eta: 0:00:16  lr: 0.004561000000000005  clips/s: 14.329  loss: 0.6570 (0.6232)  acc1: 83.3333 (81.8182)  acc5: 100.0000 (99.6212)  time: 2.0528  data: 0.3829  max mem: 13663
+Epoch: [4] Total time: 0:00:34
+Test:  [0/5]  eta: 0:00:24  loss: 0.6059 (0.6059)  acc1: 75.0000 (75.0000)  acc5: 100.0000 (100.0000)  time: 4.9673  data: 4.3983  max mem: 13663
+Test: Total time: 0:00:06
+ * Clip Acc@1 83.000 Clip Acc@5 100.000
+ * Video Acc@1 83.000 Video Acc@5 100.000
+Epoch: [5]  [ 0/18]  eta: 0:01:46  lr: 0.005005000000000005  clips/s: 14.268  loss: 0.7423 (0.7423)  acc1: 70.8333 (70.8333)  acc5: 91.6667 (91.6667)  time: 5.9235  data: 4.2413  max mem: 13663
+Epoch: [5]  [10/18]  eta: 0:00:16  lr: 0.005560000000000009  clips/s: 14.284  loss: 0.3657 (0.3884)  acc1: 87.5000 (87.1212)  acc5: 100.0000 (99.2424)  time: 2.0660  data: 0.3861  max mem: 13663
+Epoch: [5] Total time: 0:00:34
+Test:  [0/5]  eta: 0:00:26  loss: 0.4705 (0.4705)  acc1: 83.3333 (83.3333)  acc5: 100.0000 (100.0000)  time: 5.2270  data: 4.6827  max mem: 13663
+Test: Total time: 0:00:06
+ * Clip Acc@1 89.000 Clip Acc@5 100.000
+ * Video Acc@1 89.000 Video Acc@5 100.000
+Epoch: [6]  [ 0/18]  eta: 0:01:59  lr: 0.006004000000000013  clips/s: 14.225  loss: 0.1904 (0.1904)  acc1: 95.8333 (95.8333)  acc5: 100.0000 (100.0000)  time: 6.6524  data: 4.9651  max mem: 13663
+Epoch: [6]  [10/18]  eta: 0:00:17  lr: 0.006559000000000013  clips/s: 14.182  loss: 0.3200 (0.3365)  acc1: 87.5000 (88.2576)  acc5: 100.0000 (99.2424)  time: 2.1349  data: 0.4519  max mem: 13663
+Epoch: [6] Total time: 0:00:35
+Test:  [0/5]  eta: 0:00:22  loss: 0.5451 (0.5451)  acc1: 83.3333 (83.3333)  acc5: 100.0000 (100.0000)  time: 4.4749  data: 3.9078  max mem: 13663
+Test: Total time: 0:00:06
+ * Clip Acc@1 85.000 Clip Acc@5 100.000
+ * Video Acc@1 85.000 Video Acc@5 100.000
+Epoch: [7]  [ 0/18]  eta: 0:01:45  lr: 0.007003000000000015  clips/s: 14.108  loss: 0.6417 (0.6417)  acc1: 75.0000 (75.0000)  acc5: 100.0000 (100.0000)  time: 5.8609  data: 4.1595  max mem: 13663
+Epoch: [7]  [10/18]  eta: 0:00:16  lr: 0.0075580000000000196  clips/s: 14.298  loss: 0.2973 (0.3135)  acc1: 91.6667 (90.9091)  acc5: 100.0000 (100.0000)  time: 2.0516  data: 0.3786  max mem: 13663
+Epoch: [7] Total time: 0:00:34
+Test:  [0/5]  eta: 0:00:22  loss: 0.3546 (0.3546)  acc1: 83.3333 (83.3333)  acc5: 95.8333 (95.8333)  time: 4.5623  data: 3.9961  max mem: 13663
+Test: Total time: 0:00:06
+ * Clip Acc@1 92.000 Clip Acc@5 99.000
+ * Video Acc@1 92.000 Video Acc@5 99.000
+Epoch: [8]  [ 0/18]  eta: 0:01:54  lr: 0.00800200000000002  clips/s: 13.897  loss: 0.1605 (0.1605)  acc1: 95.8333 (95.8333)  acc5: 100.0000 (100.0000)  time: 6.3745  data: 4.6474  max mem: 13663
+Epoch: [8]  [10/18]  eta: 0:00:17  lr: 0.00855700000000002  clips/s: 14.006  loss: 0.1400 (0.2078)  acc1: 95.8333 (95.0758)  acc5: 100.0000 (100.0000)  time: 2.1420  data: 0.4228  max mem: 13663
+Epoch: [8] Total time: 0:00:35
+Test:  [0/5]  eta: 0:00:23  loss: 0.5372 (0.5372)  acc1: 79.1667 (79.1667)  acc5: 100.0000 (100.0000)  time: 4.7820  data: 4.2352  max mem: 13663
+Test: Total time: 0:00:06
+ * Clip Acc@1 83.000 Clip Acc@5 100.000
+ * Video Acc@1 83.000 Video Acc@5 100.000
+/opt/conda/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:149: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+Epoch: [9]  [ 0/18]  eta: 0:02:05  lr: 0.00900100000000002  clips/s: 14.110  loss: 0.3057 (0.3057)  acc1: 91.6667 (91.6667)  acc5: 100.0000 (100.0000)  time: 6.9677  data: 5.2667  max mem: 13663
+Epoch: [9]  [10/18]  eta: 0:00:17  lr: 0.00955600000000002  clips/s: 13.909  loss: 0.2409 (0.2706)  acc1: 91.6667 (90.5303)  acc5: 100.0000 (100.0000)  time: 2.1748  data: 0.4792  max mem: 13663
+Epoch: [9] Total time: 0:00:36
+Test:  [0/5]  eta: 0:00:21  loss: 0.1749 (0.1749)  acc1: 95.8333 (95.8333)  acc5: 100.0000 (100.0000)  time: 4.2685  data: 3.7070  max mem: 13663
+Test: Total time: 0:00:05
+ * Clip Acc@1 96.000 Clip Acc@5 100.000
+ * Video Acc@1 96.000 Video Acc@5 100.000
+Epoch: [10]  [ 0/18]  eta: 0:01:55  lr: 0.01  clips/s: 14.257  loss: 0.1735 (0.1735)  acc1: 91.6667 (91.6667)  acc5: 100.0000 (100.0000)  time: 6.4271  data: 4.7436  max mem: 13663
+Epoch: [10]  [10/18]  eta: 0:00:16  lr: 0.01  clips/s: 14.245  loss: 0.2384 (0.2423)  acc1: 87.5000 (90.1515)  acc5: 100.0000 (99.6212)  time: 2.1088  data: 0.4317  max mem: 13663
+Epoch: [10] Total time: 0:00:35
+Test:  [0/5]  eta: 0:00:23  loss: 0.7664 (0.7664)  acc1: 75.0000 (75.0000)  acc5: 95.8333 (95.8333)  time: 4.7302  data: 4.1574  max mem: 13663
+Test: Total time: 0:00:06
+ * Clip Acc@1 81.000 Clip Acc@5 97.000
+ * Video Acc@1 81.000 Video Acc@5 97.000
+Epoch: [11]  [ 0/18]  eta: 0:01:40  lr: 0.01  clips/s: 13.674  loss: 0.0403 (0.0403)  acc1: 100.0000 (100.0000)  acc5: 100.0000 (100.0000)  time: 5.5832  data: 3.8280  max mem: 13663
+Epoch: [11]  [10/18]  eta: 0:00:16  lr: 0.01  clips/s: 14.082  loss: 0.1609 (0.1521)  acc1: 95.8333 (95.8333)  acc5: 100.0000 (100.0000)  time: 2.0670  data: 0.3484  max mem: 13663
+Epoch: [11] Total time: 0:00:34
+Test:  [0/5]  eta: 0:00:28  loss: 0.2801 (0.2801)  acc1: 91.6667 (91.6667)  acc5: 95.8333 (95.8333)  time: 5.6373  data: 5.0807  max mem: 13663
+Test: Total time: 0:00:07
+ * Clip Acc@1 93.000 Clip Acc@5 99.000
+ * Video Acc@1 93.000 Video Acc@5 99.000
+Epoch: [12]  [ 0/18]  eta: 0:01:47  lr: 0.01  clips/s: 13.967  loss: 0.1371 (0.1371)  acc1: 95.8333 (95.8333)  acc5: 100.0000 (100.0000)  time: 5.9864  data: 4.2679  max mem: 13663
+Epoch: [12]  [10/18]  eta: 0:00:16  lr: 0.01  clips/s: 13.892  loss: 0.1948 (0.1715)  acc1: 91.6667 (94.6970)  acc5: 100.0000 (100.0000)  time: 2.1112  data: 0.3883  max mem: 13663
+Epoch: [12] Total time: 0:00:35
+Test:  [0/5]  eta: 0:00:25  loss: 0.2297 (0.2297)  acc1: 87.5000 (87.5000)  acc5: 100.0000 (100.0000)  time: 5.1316  data: 4.5761  max mem: 13663
+Test: Total time: 0:00:06
+ * Clip Acc@1 92.000 Clip Acc@5 100.000
+ * Video Acc@1 92.000 Video Acc@5 100.000
+Epoch: [13]  [ 0/18]  eta: 0:01:55  lr: 0.01  clips/s: 14.127  loss: 0.4526 (0.4526)  acc1: 87.5000 (87.5000)  acc5: 91.6667 (91.6667)  time: 6.4063  data: 4.7073  max mem: 13663
+Epoch: [13]  [10/18]  eta: 0:00:17  lr: 0.01  clips/s: 13.725  loss: 0.1451 (0.2181)  acc1: 91.6667 (93.1818)  acc5: 100.0000 (99.2424)  time: 2.1367  data: 0.4283  max mem: 13663
+Epoch: [13] Total time: 0:00:35
+Test:  [0/5]  eta: 0:00:24  loss: 0.3243 (0.3243)  acc1: 87.5000 (87.5000)  acc5: 100.0000 (100.0000)  time: 4.9791  data: 4.4088  max mem: 13663
+Test: Total time: 0:00:06
+ * Clip Acc@1 93.000 Clip Acc@5 100.000
+ * Video Acc@1 93.000 Video Acc@5 100.000
+Epoch: [14]  [ 0/18]  eta: 0:01:46  lr: 0.01  clips/s: 13.881  loss: 0.1897 (0.1897)  acc1: 91.6667 (91.6667)  acc5: 100.0000 (100.0000)  time: 5.9312  data: 4.2021  max mem: 13663
+Epoch: [14]  [10/18]  eta: 0:00:16  lr: 0.01  clips/s: 14.236  loss: 0.0788 (0.1126)  acc1: 95.8333 (96.9697)  acc5: 100.0000 (100.0000)  time: 2.0711  data: 0.3823  max mem: 13663
+Epoch: [14] Total time: 0:00:34
+Test:  [0/5]  eta: 0:00:26  loss: 0.2412 (0.2412)  acc1: 91.6667 (91.6667)  acc5: 100.0000 (100.0000)  time: 5.2474  data: 4.6895  max mem: 13663
+Test: Total time: 0:00:06
+ * Clip Acc@1 94.000 Clip Acc@5 100.000
+ * Video Acc@1 94.000 Video Acc@5 100.000
+Epoch: [15]  [ 0/18]  eta: 0:01:49  lr: 0.01  clips/s: 13.766  loss: 0.1031 (0.1031)  acc1: 95.8333 (95.8333)  acc5: 100.0000 (100.0000)  time: 6.0644  data: 4.3207  max mem: 13663
+Epoch: [15]  [10/18]  eta: 0:00:16  lr: 0.01  clips/s: 14.060  loss: 0.0937 (0.0873)  acc1: 100.0000 (98.1061)  acc5: 100.0000 (100.0000)  time: 2.1177  data: 0.3931  max mem: 13663
+Epoch: [15] Total time: 0:00:35
+Test:  [0/5]  eta: 0:00:29  loss: 0.3807 (0.3807)  acc1: 95.8333 (95.8333)  acc5: 100.0000 (100.0000)  time: 5.8660  data: 5.2981  max mem: 13663
+Test: Total time: 0:00:07
+ * Clip Acc@1 92.000 Clip Acc@5 100.000
+ * Video Acc@1 92.000 Video Acc@5 100.000
+Epoch: [16]  [ 0/18]  eta: 0:01:54  lr: 0.01  clips/s: 13.876  loss: 0.2918 (0.2918)  acc1: 83.3333 (83.3333)  acc5: 100.0000 (100.0000)  time: 6.3871  data: 4.6574  max mem: 13663
+Epoch: [16]  [10/18]  eta: 0:00:17  lr: 0.01  clips/s: 13.778  loss: 0.1038 (0.1351)  acc1: 95.8333 (94.3182)  acc5: 100.0000 (100.0000)  time: 2.1523  data: 0.4237  max mem: 13663
+Epoch: [16] Total time: 0:00:35
+Test:  [0/5]  eta: 0:00:27  loss: 0.1973 (0.1973)  acc1: 91.6667 (91.6667)  acc5: 100.0000 (100.0000)  time: 5.4166  data: 4.8530  max mem: 13663
+Test: Total time: 0:00:07
+ * Clip Acc@1 91.000 Clip Acc@5 100.000
+ * Video Acc@1 91.000 Video Acc@5 100.000
+Epoch: [17]  [ 0/18]  eta: 0:02:00  lr: 0.01  clips/s: 14.125  loss: 0.0969 (0.0969)  acc1: 100.0000 (100.0000)  acc5: 100.0000 (100.0000)  time: 6.6773  data: 4.9781  max mem: 13663
+Epoch: [17]  [10/18]  eta: 0:00:17  lr: 0.01  clips/s: 13.797  loss: 0.0996 (0.1260)  acc1: 95.8333 (95.8333)  acc5: 100.0000 (100.0000)  time: 2.1587  data: 0.4529  max mem: 13663
+Epoch: [17] Total time: 0:00:36
+Test:  [0/5]  eta: 0:00:25  loss: 0.1976 (0.1976)  acc1: 91.6667 (91.6667)  acc5: 100.0000 (100.0000)  time: 5.1193  data: 4.5595  max mem: 13663
+Test: Total time: 0:00:06
+ * Clip Acc@1 94.000 Clip Acc@5 100.000
+ * Video Acc@1 94.000 Video Acc@5 100.000
+Epoch: [18]  [ 0/18]  eta: 0:01:46  lr: 0.01  clips/s: 13.955  loss: 0.1651 (0.1651)  acc1: 95.8333 (95.8333)  acc5: 100.0000 (100.0000)  time: 5.9173  data: 4.1974  max mem: 13663
+Epoch: [18]  [10/18]  eta: 0:00:16  lr: 0.01  clips/s: 14.199  loss: 0.1651 (0.1905)  acc1: 91.6667 (93.5606)  acc5: 100.0000 (100.0000)  time: 2.0771  data: 0.3819  max mem: 13663
+Epoch: [18] Total time: 0:00:34
+Test:  [0/5]  eta: 0:00:27  loss: 0.2283 (0.2283)  acc1: 91.6667 (91.6667)  acc5: 100.0000 (100.0000)  time: 5.4898  data: 4.9162  max mem: 13663
+Test: Total time: 0:00:07
+ * Clip Acc@1 94.000 Clip Acc@5 100.000
+ * Video Acc@1 94.000 Video Acc@5 100.000
+Epoch: [19]  [ 0/18]  eta: 0:01:56  lr: 0.01  clips/s: 13.840  loss: 0.1752 (0.1752)  acc1: 91.6667 (91.6667)  acc5: 100.0000 (100.0000)  time: 6.4725  data: 4.7383  max mem: 13663
+Epoch: [19]  [10/18]  eta: 0:00:17  lr: 0.01  clips/s: 14.002  loss: 0.1010 (0.1133)  acc1: 95.8333 (95.8333)  acc5: 100.0000 (100.0000)  time: 2.1506  data: 0.4311  max mem: 13663
+Epoch: [19] Total time: 0:00:35
+Test:  [0/5]  eta: 0:00:30  loss: 0.1125 (0.1125)  acc1: 91.6667 (91.6667)  acc5: 100.0000 (100.0000)  time: 6.1136  data: 5.5492  max mem: 13663
+Test: Total time: 0:00:07
+ * Clip Acc@1 97.000 Clip Acc@5 100.000
+ * Video Acc@1 97.000 Video Acc@5 100.000
+Epoch: [20]  [ 0/18]  eta: 0:02:00  lr: 0.001  clips/s: 13.856  loss: 0.0056 (0.0056)  acc1: 100.0000 (100.0000)  acc5: 100.0000 (100.0000)  time: 6.7163  data: 4.9841  max mem: 13663
+Epoch: [20]  [10/18]  eta: 0:00:17  lr: 0.001  clips/s: 13.878  loss: 0.1331 (0.1344)  acc1: 91.6667 (94.3182)  acc5: 100.0000 (100.0000)  time: 2.1752  data: 0.4534  max mem: 13663
+Epoch: [20] Total time: 0:00:36
+Test:  [0/5]  eta: 0:00:29  loss: 0.0906 (0.0906)  acc1: 95.8333 (95.8333)  acc5: 100.0000 (100.0000)  time: 5.8894  data: 5.3198  max mem: 13663
+Test: Total time: 0:00:07
+ * Clip Acc@1 99.000 Clip Acc@5 100.000
+ * Video Acc@1 99.000 Video Acc@5 100.000
+Epoch: [21]  [ 0/18]  eta: 0:02:05  lr: 0.001  clips/s: 14.072  loss: 0.0443 (0.0443)  acc1: 100.0000 (100.0000)  acc5: 100.0000 (100.0000)  time: 6.9772  data: 5.2716  max mem: 13663
+Epoch: [21]  [10/18]  eta: 0:00:17  lr: 0.001  clips/s: 13.752  loss: 0.0626 (0.0800)  acc1: 100.0000 (96.9697)  acc5: 100.0000 (100.0000)  time: 2.1860  data: 0.4796  max mem: 13663
+Epoch: [21] Total time: 0:00:36
+Test:  [0/5]  eta: 0:00:26  loss: 0.0980 (0.0980)  acc1: 95.8333 (95.8333)  acc5: 100.0000 (100.0000)  time: 5.3493  data: 4.7893  max mem: 13663
+Test: Total time: 0:00:07
+ * Clip Acc@1 98.000 Clip Acc@5 100.000
+ * Video Acc@1 98.000 Video Acc@5 100.000
+Epoch: [22]  [ 0/18]  eta: 0:01:48  lr: 0.001  clips/s: 13.902  loss: 0.2705 (0.2705)  acc1: 91.6667 (91.6667)  acc5: 100.0000 (100.0000)  time: 6.0276  data: 4.3011  max mem: 13663
+Epoch: [22]  [10/18]  eta: 0:00:16  lr: 0.001  clips/s: 14.209  loss: 0.0548 (0.0699)  acc1: 100.0000 (98.1061)  acc5: 100.0000 (100.0000)  time: 2.0817  data: 0.3913  max mem: 13663
+Epoch: [22] Total time: 0:00:34
+Test:  [0/5]  eta: 0:00:27  loss: 0.0995 (0.0995)  acc1: 95.8333 (95.8333)  acc5: 100.0000 (100.0000)  time: 5.5690  data: 4.9920  max mem: 13663
+Test: Total time: 0:00:07
+ * Clip Acc@1 99.000 Clip Acc@5 100.000
+ * Video Acc@1 99.000 Video Acc@5 100.000
+Epoch: [23]  [ 0/18]  eta: 0:01:57  lr: 0.001  clips/s: 13.716  loss: 0.1885 (0.1885)  acc1: 95.8333 (95.8333)  acc5: 100.0000 (100.0000)  time: 6.5130  data: 4.7629  max mem: 13663
+Epoch: [23]  [10/18]  eta: 0:00:17  lr: 0.001  clips/s: 14.016  loss: 0.0879 (0.0785)  acc1: 100.0000 (98.1061)  acc5: 100.0000 (99.6212)  time: 2.1540  data: 0.4333  max mem: 13663
+Epoch: [23] Total time: 0:00:35
+Test:  [0/5]  eta: 0:00:30  loss: 0.1012 (0.1012)  acc1: 95.8333 (95.8333)  acc5: 100.0000 (100.0000)  time: 6.0556  data: 5.4972  max mem: 13663
+Test: Total time: 0:00:07
+ * Clip Acc@1 99.000 Clip Acc@5 100.000
+ * Video Acc@1 99.000 Video Acc@5 100.000
+Epoch: [24]  [ 0/18]  eta: 0:02:02  lr: 0.001  clips/s: 14.087  loss: 0.1267 (0.1267)  acc1: 91.6667 (91.6667)  acc5: 100.0000 (100.0000)  time: 6.7957  data: 5.0918  max mem: 13663
+Epoch: [24]  [10/18]  eta: 0:00:17  lr: 0.001  clips/s: 13.852  loss: 0.0229 (0.0557)  acc1: 100.0000 (98.1061)  acc5: 100.0000 (100.0000)  time: 2.1813  data: 0.4632  max mem: 13663
+Epoch: [24] Total time: 0:00:36
+Test:  [0/5]  eta: 0:00:28  loss: 0.0761 (0.0761)  acc1: 95.8333 (95.8333)  acc5: 100.0000 (100.0000)  time: 5.7259  data: 5.1736  max mem: 13663
+Test: Total time: 0:00:07
+ * Clip Acc@1 98.000 Clip Acc@5 100.000
+ * Video Acc@1 98.000 Video Acc@5 100.000
+Epoch: [25]  [ 0/18]  eta: 0:02:02  lr: 0.001  clips/s: 14.259  loss: 0.1962 (0.1962)  acc1: 91.6667 (91.6667)  acc5: 100.0000 (100.0000)  time: 6.8220  data: 5.1387  max mem: 13663
+Epoch: [25]  [10/18]  eta: 0:00:17  lr: 0.001  clips/s: 13.860  loss: 0.0307 (0.0836)  acc1: 100.0000 (97.7273)  acc5: 100.0000 (100.0000)  time: 2.1627  data: 0.4676  max mem: 13663
+Epoch: [25] Total time: 0:00:36
+Test:  [0/5]  eta: 0:00:25  loss: 0.0624 (0.0624)  acc1: 100.0000 (100.0000)  acc5: 100.0000 (100.0000)  time: 5.1080  data: 4.5487  max mem: 13663
+Test: Total time: 0:00:06
+ * Clip Acc@1 99.000 Clip Acc@5 100.000
+ * Video Acc@1 99.000 Video Acc@5 100.000
+Epoch: [26]  [ 0/18]  eta: 0:01:48  lr: 0.001  clips/s: 13.941  loss: 0.0381 (0.0381)  acc1: 95.8333 (95.8333)  acc5: 100.0000 (100.0000)  time: 6.0542  data: 4.3325  max mem: 13663
+Epoch: [26]  [10/18]  eta: 0:00:16  lr: 0.001  clips/s: 14.175  loss: 0.0812 (0.0826)  acc1: 95.8333 (96.2121)  acc5: 100.0000 (100.0000)  time: 2.0845  data: 0.3942  max mem: 13663
+Epoch: [26] Total time: 0:00:34
+Test:  [0/5]  eta: 0:00:28  loss: 0.0686 (0.0686)  acc1: 95.8333 (95.8333)  acc5: 100.0000 (100.0000)  time: 5.6156  data: 5.0580  max mem: 13663
+Test: Total time: 0:00:07
+ * Clip Acc@1 98.000 Clip Acc@5 100.000
+ * Video Acc@1 98.000 Video Acc@5 100.000
+Epoch: [27]  [ 0/18]  eta: 0:01:54  lr: 0.001  clips/s: 13.643  loss: 0.0104 (0.0104)  acc1: 100.0000 (100.0000)  acc5: 100.0000 (100.0000)  time: 6.3703  data: 4.6111  max mem: 13663
+Epoch: [27]  [10/18]  eta: 0:00:17  lr: 0.001  clips/s: 14.035  loss: 0.0344 (0.0483)  acc1: 100.0000 (98.8636)  acc5: 100.0000 (100.0000)  time: 2.1396  data: 0.4194  max mem: 13663
+Epoch: [27] Total time: 0:00:35
+Test:  [0/5]  eta: 0:00:29  loss: 0.0756 (0.0756)  acc1: 95.8333 (95.8333)  acc5: 100.0000 (100.0000)  time: 5.9658  data: 5.4159  max mem: 13663
+Test: Total time: 0:00:07
+ * Clip Acc@1 98.000 Clip Acc@5 100.000
+ * Video Acc@1 98.000 Video Acc@5 100.000
+Epoch: [28]  [ 0/18]  eta: 0:01:59  lr: 0.001  clips/s: 14.035  loss: 0.0405 (0.0405)  acc1: 100.0000 (100.0000)  acc5: 100.0000 (100.0000)  time: 6.6571  data: 4.9468  max mem: 13663
+Epoch: [28]  [10/18]  eta: 0:00:17  lr: 0.001  clips/s: 13.915  loss: 0.0405 (0.0666)  acc1: 100.0000 (97.7273)  acc5: 100.0000 (100.0000)  time: 2.1563  data: 0.4500  max mem: 13663
+Epoch: [28] Total time: 0:00:35
+Test:  [0/5]  eta: 0:00:28  loss: 0.0577 (0.0577)  acc1: 100.0000 (100.0000)  acc5: 100.0000 (100.0000)  time: 5.7335  data: 5.1862  max mem: 13663
+Test: Total time: 0:00:07
+ * Clip Acc@1 100.000 Clip Acc@5 100.000
+ * Video Acc@1 100.000 Video Acc@5 100.000
+Epoch: [29]  [ 0/18]  eta: 0:02:05  lr: 0.001  clips/s: 14.222  loss: 0.0297 (0.0297)  acc1: 100.0000 (100.0000)  acc5: 100.0000 (100.0000)  time: 6.9939  data: 5.3062  max mem: 13663
+Epoch: [29]  [10/18]  eta: 0:00:17  lr: 0.001  clips/s: 13.603  loss: 0.0232 (0.0245)  acc1: 100.0000 (99.6212)  acc5: 100.0000 (100.0000)  time: 2.1913  data: 0.4828  max mem: 13663
+Epoch: [29] Total time: 0:00:36
+Test:  [0/5]  eta: 0:00:26  loss: 0.0609 (0.0609)  acc1: 100.0000 (100.0000)  acc5: 100.0000 (100.0000)  time: 5.2301  data: 4.6705  max mem: 13663
+Test: Total time: 0:00:06
+ * Clip Acc@1 98.000 Clip Acc@5 100.000
+ * Video Acc@1 98.000 Video Acc@5 100.000
+Epoch: [30]  [ 0/18]  eta: 0:01:44  lr: 0.0001  clips/s: 13.800  loss: 0.0791 (0.0791)  acc1: 95.8333 (95.8333)  acc5: 100.0000 (100.0000)  time: 5.8091  data: 4.0697  max mem: 13663
+Epoch: [30]  [10/18]  eta: 0:00:16  lr: 0.0001  clips/s: 14.161  loss: 0.0210 (0.0312)  acc1: 100.0000 (99.2424)  acc5: 100.0000 (100.0000)  time: 2.0613  data: 0.3703  max mem: 13663
+Epoch: [30] Total time: 0:00:34
+Test:  [0/5]  eta: 0:00:27  loss: 0.0674 (0.0674)  acc1: 95.8333 (95.8333)  acc5: 100.0000 (100.0000)  time: 5.4277  data: 4.8558  max mem: 13663
+Test: Total time: 0:00:07
+ * Clip Acc@1 98.000 Clip Acc@5 100.000
+ * Video Acc@1 98.000 Video Acc@5 100.000
+Epoch: [31]  [ 0/18]  eta: 0:01:58  lr: 0.0001  clips/s: 13.692  loss: 0.0307 (0.0307)  acc1: 100.0000 (100.0000)  acc5: 100.0000 (100.0000)  time: 6.6032  data: 4.8502  max mem: 13663
+Epoch: [31]  [10/18]  eta: 0:00:17  lr: 0.0001  clips/s: 14.041  loss: 0.0210 (0.0432)  acc1: 100.0000 (98.4848)  acc5: 100.0000 (100.0000)  time: 2.1613  data: 0.4412  max mem: 13663
+Epoch: [31] Total time: 0:00:35
+Test:  [0/5]  eta: 0:00:30  loss: 0.0592 (0.0592)  acc1: 100.0000 (100.0000)  acc5: 100.0000 (100.0000)  time: 6.0059  data: 5.4352  max mem: 13663
+Test: Total time: 0:00:07
+ * Clip Acc@1 100.000 Clip Acc@5 100.000
+ * Video Acc@1 100.000 Video Acc@5 100.000
+Epoch: [32]  [ 0/18]  eta: 0:01:56  lr: 0.0001  clips/s: 14.135  loss: 0.0031 (0.0031)  acc1: 100.0000 (100.0000)  acc5: 100.0000 (100.0000)  time: 6.4733  data: 4.7753  max mem: 13663
+Epoch: [32]  [10/18]  eta: 0:00:17  lr: 0.0001  clips/s: 13.928  loss: 0.0219 (0.0429)  acc1: 100.0000 (98.8636)  acc5: 100.0000 (100.0000)  time: 2.1438  data: 0.4344  max mem: 13663
+Epoch: [32] Total time: 0:00:35
+Test:  [0/5]  eta: 0:00:27  loss: 0.0575 (0.0575)  acc1: 100.0000 (100.0000)  acc5: 100.0000 (100.0000)  time: 5.5170  data: 4.9428  max mem: 13663
+Test: Total time: 0:00:07
+ * Clip Acc@1 100.000 Clip Acc@5 100.000
+ * Video Acc@1 100.000 Video Acc@5 100.000
+Epoch: [33]  [ 0/18]  eta: 0:02:00  lr: 0.0001  clips/s: 14.024  loss: 0.1015 (0.1015)  acc1: 95.8333 (95.8333)  acc5: 100.0000 (100.0000)  time: 6.6713  data: 4.9598  max mem: 13663
+Epoch: [33]  [10/18]  eta: 0:00:17  lr: 0.0001  clips/s: 13.605  loss: 0.0228 (0.0419)  acc1: 100.0000 (99.2424)  acc5: 100.0000 (100.0000)  time: 2.1635  data: 0.4513  max mem: 13663
+Epoch: [33] Total time: 0:00:36
+Test:  [0/5]  eta: 0:00:24  loss: 0.0641 (0.0641)  acc1: 100.0000 (100.0000)  acc5: 100.0000 (100.0000)  time: 4.9377  data: 4.3597  max mem: 13663
+Test: Total time: 0:00:06
+ * Clip Acc@1 100.000 Clip Acc@5 100.000
+ * Video Acc@1 100.000 Video Acc@5 100.000
+Epoch: [34]  [ 0/18]  eta: 0:01:50  lr: 0.0001  clips/s: 13.947  loss: 0.0057 (0.0057)  acc1: 100.0000 (100.0000)  acc5: 100.0000 (100.0000)  time: 6.1310  data: 4.4100  max mem: 13663
+Epoch: [34]  [10/18]  eta: 0:00:16  lr: 0.0001  clips/s: 14.190  loss: 0.0123 (0.0229)  acc1: 100.0000 (100.0000)  acc5: 100.0000 (100.0000)  time: 2.0911  data: 0.4013  max mem: 13663
+Epoch: [34] Total time: 0:00:34
+Test:  [0/5]  eta: 0:00:27  loss: 0.0504 (0.0504)  acc1: 100.0000 (100.0000)  acc5: 100.0000 (100.0000)  time: 5.5018  data: 4.9144  max mem: 13663
+Test: Total time: 0:00:07
+ * Clip Acc@1 100.000 Clip Acc@5 100.000
+ * Video Acc@1 100.000 Video Acc@5 100.000
+Epoch: [35]  [ 0/18]  eta: 0:01:52  lr: 0.0001  clips/s: 13.724  loss: 0.0655 (0.0655)  acc1: 95.8333 (95.8333)  acc5: 100.0000 (100.0000)  time: 6.2763  data: 4.5273  max mem: 13663
+Epoch: [35]  [10/18]  eta: 0:00:17  lr: 0.0001  clips/s: 13.996  loss: 0.0702 (0.0874)  acc1: 95.8333 (96.5909)  acc5: 100.0000 (100.0000)  time: 2.1392  data: 0.4119  max mem: 13663
+Epoch: [35] Total time: 0:00:35
+Test:  [0/5]  eta: 0:00:30  loss: 0.0582 (0.0582)  acc1: 100.0000 (100.0000)  acc5: 100.0000 (100.0000)  time: 6.0837  data: 5.5132  max mem: 13663
+Test: Total time: 0:00:07
+ * Clip Acc@1 98.000 Clip Acc@5 100.000
+ * Video Acc@1 98.000 Video Acc@5 100.000
+Epoch: [36]  [ 0/18]  eta: 0:02:04  lr: 0.0001  clips/s: 14.156  loss: 0.1266 (0.1266)  acc1: 91.6667 (91.6667)  acc5: 100.0000 (100.0000)  time: 6.9158  data: 5.2203  max mem: 13663
+Epoch: [36]  [10/18]  eta: 0:00:17  lr: 0.0001  clips/s: 13.929  loss: 0.0202 (0.0417)  acc1: 100.0000 (97.7273)  acc5: 100.0000 (100.0000)  time: 2.1825  data: 0.4749  max mem: 13663
+Epoch: [36] Total time: 0:00:36
+Test:  [0/5]  eta: 0:00:28  loss: 0.0573 (0.0573)  acc1: 100.0000 (100.0000)  acc5: 100.0000 (100.0000)  time: 5.6133  data: 5.0521  max mem: 13663
+Test: Total time: 0:00:07
+ * Clip Acc@1 100.000 Clip Acc@5 100.000
+ * Video Acc@1 100.000 Video Acc@5 100.000
+Epoch: [37]  [ 0/18]  eta: 0:02:04  lr: 0.0001  clips/s: 14.147  loss: 0.0122 (0.0122)  acc1: 100.0000 (100.0000)  acc5: 100.0000 (100.0000)  time: 6.9043  data: 5.2077  max mem: 13663
+Epoch: [37]  [10/18]  eta: 0:00:17  lr: 0.0001  clips/s: 13.684  loss: 0.0604 (0.0480)  acc1: 100.0000 (98.4848)  acc5: 100.0000 (100.0000)  time: 2.1819  data: 0.4738  max mem: 13663
+Epoch: [37] Total time: 0:00:36
+Test:  [0/5]  eta: 0:00:25  loss: 0.0577 (0.0577)  acc1: 100.0000 (100.0000)  acc5: 100.0000 (100.0000)  time: 5.1080  data: 4.5466  max mem: 13663
+Test: Total time: 0:00:06
+ * Clip Acc@1 98.000 Clip Acc@5 100.000
+ * Video Acc@1 98.000 Video Acc@5 100.000
+Epoch: [38]  [ 0/18]  eta: 0:01:54  lr: 0.0001  clips/s: 14.070  loss: 0.0246 (0.0246)  acc1: 100.0000 (100.0000)  acc5: 100.0000 (100.0000)  time: 6.3360  data: 4.6299  max mem: 13663
+Epoch: [38]  [10/18]  eta: 0:00:16  lr: 0.0001  clips/s: 14.193  loss: 0.0246 (0.0319)  acc1: 100.0000 (100.0000)  acc5: 100.0000 (100.0000)  time: 2.1091  data: 0.4213  max mem: 13663
+Epoch: [38] Total time: 0:00:35
+Test:  [0/5]  eta: 0:00:26  loss: 0.0587 (0.0587)  acc1: 100.0000 (100.0000)  acc5: 100.0000 (100.0000)  time: 5.3740  data: 4.8160  max mem: 13663
+Test: Total time: 0:00:07
+ * Clip Acc@1 99.000 Clip Acc@5 100.000
+ * Video Acc@1 99.000 Video Acc@5 100.000
+Epoch: [39]  [ 0/18]  eta: 0:01:56  lr: 0.0001  clips/s: 13.729  loss: 0.0103 (0.0103)  acc1: 100.0000 (100.0000)  acc5: 100.0000 (100.0000)  time: 6.4697  data: 4.7213  max mem: 13663
+Epoch: [39]  [10/18]  eta: 0:00:17  lr: 0.0001  clips/s: 14.026  loss: 0.0133 (0.0384)  acc1: 100.0000 (98.4848)  acc5: 100.0000 (100.0000)  time: 2.1495  data: 0.4295  max mem: 13663
+Epoch: [39] Total time: 0:00:35
+Test:  [0/5]  eta: 0:00:28  loss: 0.0544 (0.0544)  acc1: 100.0000 (100.0000)  acc5: 100.0000 (100.0000)  time: 5.6886  data: 5.1334  max mem: 13663
+Test: Total time: 0:00:07
+ * Clip Acc@1 99.000 Clip Acc@5 100.000
+ * Video Acc@1 99.000 Video Acc@5 100.000
+Epoch: [40]  [ 0/18]  eta: 0:02:02  lr: 1e-05  clips/s: 14.169  loss: 0.0078 (0.0078)  acc1: 100.0000 (100.0000)  acc5: 100.0000 (100.0000)  time: 6.8227  data: 5.1287  max mem: 13663
+Epoch: [40]  [10/18]  eta: 0:00:17  lr: 1e-05  clips/s: 13.843  loss: 0.0250 (0.0559)  acc1: 100.0000 (97.7273)  acc5: 100.0000 (100.0000)  time: 2.1745  data: 0.4665  max mem: 13663
+Epoch: [40] Total time: 0:00:36
+Test:  [0/5]  eta: 0:00:27  loss: 0.0583 (0.0583)  acc1: 100.0000 (100.0000)  acc5: 100.0000 (100.0000)  time: 5.4016  data: 4.8482  max mem: 13663
+Test: Total time: 0:00:07
+ * Clip Acc@1 99.000 Clip Acc@5 100.000
+ * Video Acc@1 99.000 Video Acc@5 100.000
+Epoch: [41]  [ 0/18]  eta: 0:02:06  lr: 1e-05  clips/s: 14.055  loss: 0.0772 (0.0772)  acc1: 95.8333 (95.8333)  acc5: 100.0000 (100.0000)  time: 7.0251  data: 5.3173  max mem: 13663
+Epoch: [41]  [10/18]  eta: 0:00:17  lr: 1e-05  clips/s: 13.806  loss: 0.0307 (0.0349)  acc1: 100.0000 (99.2424)  acc5: 100.0000 (100.0000)  time: 2.1839  data: 0.4837  max mem: 13663
+Epoch: [41] Total time: 0:00:36
+Test:  [0/5]  eta: 0:00:24  loss: 0.0725 (0.0725)  acc1: 95.8333 (95.8333)  acc5: 100.0000 (100.0000)  time: 4.8468  data: 4.2717  max mem: 13663
+Test: Total time: 0:00:06
+ * Clip Acc@1 97.000 Clip Acc@5 100.000
+ * Video Acc@1 97.000 Video Acc@5 100.000
+Epoch: [42]  [ 0/18]  eta: 0:01:53  lr: 1e-05  clips/s: 14.121  loss: 0.1140 (0.1140)  acc1: 95.8333 (95.8333)  acc5: 100.0000 (100.0000)  time: 6.3205  data: 4.6207  max mem: 13663
+Epoch: [42]  [10/18]  eta: 0:00:16  lr: 1e-05  clips/s: 14.102  loss: 0.0379 (0.0419)  acc1: 100.0000 (99.2424)  acc5: 100.0000 (100.0000)  time: 2.1117  data: 0.4205  max mem: 13663
+Epoch: [42] Total time: 0:00:35
+Test:  [0/5]  eta: 0:00:23  loss: 0.0517 (0.0517)  acc1: 100.0000 (100.0000)  acc5: 100.0000 (100.0000)  time: 4.7942  data: 4.2246  max mem: 13663
+Test: Total time: 0:00:06
+ * Clip Acc@1 100.000 Clip Acc@5 100.000
+ * Video Acc@1 100.000 Video Acc@5 100.000
+Epoch: [43]  [ 0/18]  eta: 0:02:04  lr: 1e-05  clips/s: 13.758  loss: 0.0065 (0.0065)  acc1: 100.0000 (100.0000)  acc5: 100.0000 (100.0000)  time: 6.9014  data: 5.1568  max mem: 13663
+Epoch: [43]  [10/18]  eta: 0:00:17  lr: 1e-05  clips/s: 14.020  loss: 0.0308 (0.0344)  acc1: 100.0000 (99.6212)  acc5: 100.0000 (100.0000)  time: 2.1884  data: 0.4691  max mem: 13663
+Epoch: [43] Total time: 0:00:36
+Test:  [0/5]  eta: 0:00:26  loss: 0.0679 (0.0679)  acc1: 95.8333 (95.8333)  acc5: 100.0000 (100.0000)  time: 5.3906  data: 4.8220  max mem: 13663
+Test: Total time: 0:00:07
+ * Clip Acc@1 98.000 Clip Acc@5 100.000
+ * Video Acc@1 98.000 Video Acc@5 100.000
+Epoch: [44]  [ 0/18]  eta: 0:02:02  lr: 1e-05  clips/s: 13.970  loss: 0.0052 (0.0052)  acc1: 100.0000 (100.0000)  acc5: 100.0000 (100.0000)  time: 6.8188  data: 5.0998  max mem: 13663
+Epoch: [44]  [10/18]  eta: 0:00:17  lr: 1e-05  clips/s: 13.917  loss: 0.0209 (0.0214)  acc1: 100.0000 (100.0000)  acc5: 100.0000 (100.0000)  time: 2.1717  data: 0.4640  max mem: 13663
+Epoch: [44] Total time: 0:00:35
+Test:  [0/5]  eta: 0:00:27  loss: 0.0524 (0.0524)  acc1: 100.0000 (100.0000)  acc5: 100.0000 (100.0000)  time: 5.5875  data: 5.0375  max mem: 13663
+Test: Total time: 0:00:07
+ * Clip Acc@1 99.000 Clip Acc@5 100.000
+ * Video Acc@1 99.000 Video Acc@5 100.000
+Training time 0:33:34

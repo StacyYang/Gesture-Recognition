@@ -1,0 +1,4 @@
+**/*.pth
+dataset/**/*
+gesture_sequences/**/*
+output/**/*
